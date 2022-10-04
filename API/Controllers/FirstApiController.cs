@@ -1,5 +1,6 @@
 ﻿using API.Entities;
 using API.Entities.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,9 +11,8 @@ using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("[Controller]")]
-    public class FirstApiController : Controller
+   
+    public class FirstApiController : BaseApiController
     {
         DataContext _dataContext;
         public FirstApiController(DataContext dataContext)
@@ -21,7 +21,8 @@ namespace API.Controllers
         }
 
 
-        [HttpGet("getData")]
+        [HttpGet("users")]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(List<AppUser>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult> Index()
         {
@@ -30,7 +31,8 @@ namespace API.Controllers
             return Ok(datalist);
         }
 
-        [HttpGet("get/{id}/data")]
+        [HttpGet("users/{id}")]
+        [Authorize]
         [ProducesResponseType(typeof(List<AppUser>),(int)HttpStatusCode.OK)]
         public async Task<ActionResult> data(int id)
         {

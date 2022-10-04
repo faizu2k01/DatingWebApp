@@ -55,3 +55,13 @@ C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\l
 C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libsqlite3.dylib
 C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\sqlite3.dll
 C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\System.Text.Json.dll
