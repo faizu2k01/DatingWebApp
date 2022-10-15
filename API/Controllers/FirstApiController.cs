@@ -1,5 +1,8 @@
 ﻿using API.Entities;
 using API.Entities.Data;
+using API.Entities.Dto;
+using API.interfaces;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,32 +14,47 @@ using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-   
+    [Authorize]
     public class FirstApiController : BaseApiController
     {
-        DataContext _dataContext;
-        public FirstApiController(DataContext dataContext)
+        private readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
+
+        public FirstApiController(IUserRepository userRepository,IMapper mapper)
         {
-            _dataContext = dataContext;
+            _userRepository = userRepository;
+            _mapper = mapper;
         }
 
 
         [HttpGet("users")]
         [AllowAnonymous]
-        [ProducesResponseType(typeof(List<AppUser>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult> Index()
+        [ProducesResponseType(typeof(List<MemberDto>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<MemberDto>> Index()
         {
-            var datalist =  await _dataContext.User.ToListAsync();
+            var users = await _userRepository.GetMembersAsync();
 
-            return Ok(datalist);
+           
+            return Ok(users);
         }
 
         [HttpGet("users/{id}")]
-        [Authorize]
-        [ProducesResponseType(typeof(List<AppUser>),(int)HttpStatusCode.OK)]
-        public async Task<ActionResult> data(int id)
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(MemberDto),(int)HttpStatusCode.OK)]
+        public async Task<ActionResult<MemberDto>> GetUserById(int id)
         {
-            return Ok( await _dataContext.User.FindAsync(id));
+            var user = await _userRepository.GetUserByUIdAsync(id);
+            var userToReturn = _mapper.Map<MemberDto>(user);
+            return Ok(userToReturn);
+        }
+
+        [HttpGet("users/name/{username}")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(MemberDto), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<MemberDto>> GetUserByName(string username)
+        {
+            var user = await _userRepository.GetMemberByNameAsync(username);
+            return Ok(user);
         }
     }
 }

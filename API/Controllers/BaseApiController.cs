@@ -9,7 +9,5 @@ namespace API.Controllers
     [ApiController]
     [Route("[Controller]")]
     public class BaseApiController : Controller
-    {
-
-    }
+    { }
 }

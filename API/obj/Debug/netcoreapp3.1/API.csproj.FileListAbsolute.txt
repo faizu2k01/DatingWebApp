@@ -65,3 +65,6 @@ C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tok
 C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\Entities\Data\UserSeedData.json
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\faizh\DatingApp\API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

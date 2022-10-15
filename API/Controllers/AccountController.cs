@@ -23,7 +23,7 @@ namespace API.Controllers
             _dataContext = dataContext;
             _token = token;
         }
-        [HttpPost("Login")]
+        [HttpPost("login")]
         public async Task<ActionResult<UserDto>> LoginUser(RegisterUserDto registerUserDto)
         {
             var user = await _dataContext.User.SingleOrDefaultAsync(x => x.UserName == registerUserDto.UserName);

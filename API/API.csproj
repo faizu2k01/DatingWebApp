@@ -12,9 +12,24 @@
     <Compile Remove="Migrations\20220928120535_newDB.Designer.cs" />
     <Compile Remove="Migrations\20220928121102_newDB.cs" />
     <Compile Remove="Migrations\20220928121102_newDB.Designer.cs" />
+    <Compile Remove="Migrations\20221015054301_newDb.cs" />
+    <Compile Remove="Migrations\20221015054301_newDb.Designer.cs" />
+    <Compile Remove="Migrations\20221015054421_newDB.cs" />
+    <Compile Remove="Migrations\20221015054421_newDB.Designer.cs" />
+    <Compile Remove="Migrations\20221015054537_newDB.cs" />
+    <Compile Remove="Migrations\20221015054537_newDB.Designer.cs" />
+    <Compile Remove="Migrations\20221015121352_newMigartion.cs" />
+    <Compile Remove="Migrations\20221015121352_newMigartion.Designer.cs" />
+    <Compile Remove="Migrations\20221015153547_newDB1.cs" />
+    <Compile Remove="Migrations\20221015153547_newDB1.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.29" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
