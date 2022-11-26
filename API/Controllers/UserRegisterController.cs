@@ -1,7 +1,8 @@
 ﻿using API.Entities;
-using API.Entities.Data;
 using API.Entities.Dto;
 using API.interfaces;
+using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -15,13 +16,19 @@ namespace API.Controllers
 {
     public class UserRegisterController : BaseApiController
     {
-        DataContext _dataContext;
+       
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
         private readonly ITokenService _tokenService;
+        private readonly IMapper _mapper;
 
-        public UserRegisterController(DataContext dataContext, ITokenService tokenService)
+        public UserRegisterController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService,IMapper mapper)
         {
-            _dataContext = dataContext;
+            
+            _userManager = userManager;
+            _signInManager = signInManager;
             _tokenService = tokenService;
+            _mapper = mapper;
         }
 
         [HttpPost("register")]
@@ -29,30 +36,32 @@ namespace API.Controllers
         {
             
             if (await isExists(registerUserDto.UserName)) return BadRequest("User already exists");
-           
-            using var hmac = new HMACSHA512();
 
-            var user = new AppUser
-            {
-                UserName = registerUserDto.UserName,
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerUserDto.Password)),
-                PasswordSalt = hmac.Key
-            };
+            var user = _mapper.Map<AppUser>(registerUserDto);
 
-            _dataContext.User.Add(user);
-            await _dataContext.SaveChangesAsync();
+            user.UserName = registerUserDto.UserName.ToLower();
+
+            var result = _userManager.CreateAsync(user,registerUserDto.Password);
+
+            if (!result.IsCompleted) return BadRequest("Invalid Username");
+
+            var roleResult = await _userManager.AddToRoleAsync(user, "Member");
+
+            if (!roleResult.Succeeded) return BadRequest("Failed to load roles");
 
             return new UserDto()
             {
                 UserName = user.UserName,
-                Token = _tokenService.CreateToken(user)
+                Token = await _tokenService.CreateToken(user),
+                KnownAs = user.KnownAs,
+                Gender = user.Gender
             }; 
                 
         }
 
         private async Task<bool> isExists(string username)
         {
-            return await _dataContext.User.AnyAsync(x => x.UserName == username);
+            return await _userManager.Users.AnyAsync(x => x.UserName == username);
         } 
     }
 }

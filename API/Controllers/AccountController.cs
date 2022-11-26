@@ -2,6 +2,7 @@
 using API.Entities.Data;
 using API.Entities.Dto;
 using API.interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -15,34 +16,37 @@ namespace API.Controllers
 {
     public class AccountController : BaseApiController
     {
-        DataContext _dataContext;
+        
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
         private readonly ITokenService _token;
 
-        public AccountController(DataContext dataContext,ITokenService token)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,  ITokenService token)
         {
-            _dataContext = dataContext;
+            _userManager = userManager;
+            _signInManager = signInManager;
             _token = token;
         }
         [HttpPost("login")]
-        public async Task<ActionResult<UserDto>> LoginUser(RegisterUserDto registerUserDto)
+        public async Task<ActionResult<UserDto>> LoginUser(UserLoginDto registerUserDto)
         {
-            var user = await _dataContext.User.SingleOrDefaultAsync(x => x.UserName == registerUserDto.UserName);
+            registerUserDto.UserName = registerUserDto.UserName.ToLower();
+            var user = await _userManager.Users.Include(x=>x.Photos).SingleOrDefaultAsync(x => x.UserName == registerUserDto.UserName);
+
             if (user == null) return Unauthorized("User not found");
 
-            using var hmac = new HMACSHA512(user.PasswordSalt);
+            var result = await _signInManager.CheckPasswordSignInAsync(user, registerUserDto.Password, false);
 
-            var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerUserDto.Password));
-
-            for (int i = 0; i < computedHash.Length; i++)
-            {
-               if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Wrong password");
-            }
-
+            if (!result.Succeeded) return Unauthorized("Invalid password");
             return new UserDto()
             {
                 UserName = user.UserName,
-                Token = _token.CreateToken(user)
+                Token = await _token.CreateToken(user),
+                PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
+                Gender = user.Gender
             };
         }
+
+        
     }
 }

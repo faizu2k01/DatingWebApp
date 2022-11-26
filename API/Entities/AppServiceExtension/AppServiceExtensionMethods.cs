@@ -2,6 +2,7 @@
 using API.Helper;
 using API.interfaces;
 using API.Service;
+using API.SignalR;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -17,8 +18,12 @@ namespace API.AppServiceExtension
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
+            services.AddSingleton<PresenceTracker>();
+            services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
             services.AddScoped<ITokenService, TokenService>();
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IPhotoService, PhotoService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<LogUserActivity>();
             services.AddAutoMapper(typeof(AutiMapperProfiles).Assembly);
             services.AddDbContext<DataContext>(options =>
             {

@@ -1,4 +1,5 @@
 ﻿using API.Entities.Dto;
+using API.Helper;
 using API.interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
@@ -21,15 +22,44 @@ namespace API.Entities.Data
             _mapper = mapper;
         }
 
+        public async Task<string> GetUserGender(string username)
+        {
+             return   await  _dataContext.User.Where(x => x.UserName == username).Select(x => x.Gender).FirstOrDefaultAsync();
+
+        }
+
         public async Task<MemberDto> GetMemberByNameAsync(string username)
         {
             return await _dataContext.User.Where(x => x.UserName == username)
                 .ProjectTo<MemberDto>(_mapper.ConfigurationProvider).SingleOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<MemberDto>> GetMembersAsync()
+        public async Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams)
         {
-            return await _dataContext.User.ProjectTo<MemberDto>(_mapper.ConfigurationProvider).ToListAsync();
+            var query = _dataContext.User.AsQueryable();
+
+            query = query.Where(x => x.UserName != userParams.CurrentUsername );
+            query = query.Where(x => x.Gender == userParams.Gender);
+
+            var minDob = DateTime.Today.AddYears(-userParams.MaxAge - 1);
+            var maxDob = DateTime.Today.AddYears(-userParams.MinAge);
+
+            query = query.Where(u => u.DateOfBirth >= minDob && u.DateOfBirth <= maxDob);
+
+            query = query.Where(x => x.Photos.Any( x=> x.IsApproved));
+
+
+            query = userParams.OrderBy switch
+            {
+                "created"=>query.OrderByDescending(u => u.Created),
+                  _ => query.OrderByDescending(u => u.LastAction)
+            };
+
+
+
+            return await PagedList<MemberDto>.CreateAsync(query.ProjectTo<MemberDto>(_mapper.ConfigurationProvider).AsNoTracking(), userParams.PageNumber, userParams.PageSize);
+
+
         }
 
         public async Task<AppUser> GetUserByUIdAsync(int id)
@@ -39,7 +69,7 @@ namespace API.Entities.Data
 
         public async Task<AppUser> GetUserByUsernameAsync(string username)
         {
-            return await _dataContext.User.Include(x=>x.Photos).SingleOrDefaultAsync(x => x.UserName == username);
+            return await _dataContext.User.Include(x=>x.Photos).SingleOrDefaultAsync(x => x.UserName == username && x.Photos.Any(y => y.IsApproved && !y.IsRejected));
         }
 
         public async Task<IEnumerable<AppUser>> GetUsersAsync()
@@ -47,14 +77,11 @@ namespace API.Entities.Data
             return await _dataContext.User.Include(x => x.Photos).ToListAsync();
         }
 
-        public async Task<bool> SaveAllAsync()
-        {
-            return await _dataContext.SaveChangesAsync() > 0;
-        }
-
         public void UpdateUser(AppUser user)
         {
             _dataContext.Entry(user).State = EntityState.Modified;
         }
+
+
     }
 }
