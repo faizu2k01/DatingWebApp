@@ -1,9 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace API.Migrations
 {
-    public partial class hereIdentityDatabse : Migration
+    public partial class newDataSource : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +13,7 @@ namespace API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(nullable: true)
@@ -27,7 +28,7 @@ namespace API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     UserName = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
                     Email = table.Column<string>(maxLength: 256, nullable: true),
@@ -59,11 +60,22 @@ namespace API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Groups",
+                columns: table => new
+                {
+                    Name = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Groups", x => x.Name);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     RoleId = table.Column<int>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -84,7 +96,7 @@ namespace API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     UserId = table.Column<int>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -193,7 +205,7 @@ namespace API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     SenderId = table.Column<int>(nullable: false),
                     SenderUsername = table.Column<string>(nullable: false),
                     RecipientId = table.Column<int>(nullable: false),
@@ -226,9 +238,11 @@ namespace API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Url = table.Column<string>(nullable: true),
-                    IsMain = table.Column<bool>(nullable: true),
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Url = table.Column<string>(nullable: false),
+                    IsMain = table.Column<bool>(nullable: false),
+                    IsApproved = table.Column<bool>(nullable: false),
+                    IsRejected = table.Column<bool>(nullable: true),
                     PublicId = table.Column<string>(nullable: true),
                     AppUserId = table.Column<int>(nullable: false)
                 },
@@ -241,6 +255,25 @@ namespace API.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Connections",
+                columns: table => new
+                {
+                    ConnectionId = table.Column<string>(nullable: false),
+                    UserName = table.Column<string>(nullable: false),
+                    GroupName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Connections", x => x.ConnectionId);
+                    table.ForeignKey(
+                        name: "FK_Connections_Groups_GroupName",
+                        column: x => x.GroupName,
+                        principalTable: "Groups",
+                        principalColumn: "Name",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -281,6 +314,11 @@ namespace API.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Connections_GroupName",
+                table: "Connections",
+                column: "GroupName");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Like_LikedUserId",
                 table: "Like",
                 column: "LikedUserId");
@@ -319,6 +357,9 @@ namespace API.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Connections");
+
+            migrationBuilder.DropTable(
                 name: "Like");
 
             migrationBuilder.DropTable(
@@ -329,6 +370,9 @@ namespace API.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Groups");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

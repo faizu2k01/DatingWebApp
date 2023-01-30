@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\faizh\\DatingApp\\API\\API.csproj": {}
+    "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\faizh\\DatingApp\\API\\API.csproj": {
+    "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faizh\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\faizh\\DatingApp\\API\\API.csproj",
+        "projectPath": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\faizh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faizh\\DatingApp\\API\\obj\\",
+        "outputPath": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\faizh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,6 +73,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[3.1.0, )"
             },

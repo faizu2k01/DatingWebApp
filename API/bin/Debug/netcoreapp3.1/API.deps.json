@@ -39,6 +39,7 @@
           "Microsoft.EntityFrameworkCore.Design": "3.1.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.0",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.0",
           "SQLite": "3.13.0",
           "Swashbuckle.AspNetCore": "6.4.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.4.0",
@@ -261,7 +262,7 @@
           "System.Resources.Reader": "4.1.2.0",
           "System.Resources.ResourceManager.Reference": "4.1.2.0",
           "System.Resources.Writer": "4.1.2.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.0.6.0",
+          "System.Runtime.CompilerServices.Unsafe.Reference": "4.0.6.0",
           "System.Runtime.CompilerServices.VisualC": "4.1.2.0",
           "System.Runtime.Reference": "4.2.2.0",
           "System.Runtime.Extensions.Reference": "4.2.2.0",
@@ -758,6 +759,37 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Npgsql/4.1.2": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Npgsql.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.1.2.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Npgsql.dll": {}
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/3.1.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.0",
+          "Microsoft.EntityFrameworkCore.Abstractions": "3.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.0",
+          "Npgsql": "4.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        }
+      },
       "SQLite/3.13.0": {
         "runtimeTargets": {
           "runtimes/linux-x64/native/libsqlite3.so": {
@@ -1224,6 +1256,7 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -2587,7 +2620,7 @@
         },
         "compileOnly": true
       },
-      "System.Runtime.CompilerServices.Unsafe/4.0.6.0": {
+      "System.Runtime.CompilerServices.Unsafe.Reference/4.0.6.0": {
         "compile": {
           "System.Runtime.CompilerServices.Unsafe.dll": {}
         },
@@ -3294,6 +3327,20 @@
       "path": "newtonsoft.json/12.0.1",
       "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
     },
+    "Npgsql/4.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-41Nht/GnC/cRCA/2T9vq5NAv8m24RDp3paRhJCMc8ipOURH6zDZAQFe8mcLq1hAgMkK1Wy8VoRYL/8Op+L6OCg==",
+      "path": "npgsql/4.1.2",
+      "hashPath": "npgsql.4.1.2.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RoT3YXmYpjGTPqYnENYAnKTgTe0/8IIDWpJ5JC+R/KgqS0/+XZDFMY0mV5yzQzjVt1rj/KChQ4ta7WLzqnI2/g==",
+      "path": "npgsql.entityframeworkcore.postgresql/3.1.0",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.3.1.0.nupkg.sha512"
+    },
     "SQLite/3.13.0": {
       "type": "package",
       "serviceable": true,
@@ -3573,6 +3620,13 @@
       "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
+      "path": "system.runtime.compilerservices.unsafe/4.6.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
@@ -4722,7 +4776,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Runtime.CompilerServices.Unsafe/4.0.6.0": {
+    "System.Runtime.CompilerServices.Unsafe.Reference/4.0.6.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

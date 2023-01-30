@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using API.AppServiceExtension;
+using API.Controllers;
 using API.Entities.Data;
 using API.IdentityServiceExtension;
 using API.interfaces;
@@ -40,10 +41,10 @@ namespace API
             services.AddApplicationServices(Configuration);
             services.AddControllers();
             services.AddSignalR();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
-            });
+           // services.AddSwaggerGen(c =>
+            //{
+              //  c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
+            //});
             services.AddCors();
             services.AddIdentityServiceOfApplication(Configuration);
           
@@ -60,8 +61,8 @@ namespace API
 
             app.UseMiddleware<ExceptionMiddleware>();
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
+           // app.UseSwagger();
+           // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -71,11 +72,17 @@ namespace API
             app.UseAuthentication();
             app.UseAuthorization();
 
+
+            app.UseFileServer();
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<PresenceHub>("hubs/presence");
                 endpoints.MapHub<MessageHub>("hubs/message");
+                endpoints.MapFallbackToController("Index", "FallBack");
+
             });
         }
     }
