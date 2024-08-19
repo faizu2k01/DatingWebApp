@@ -27,7 +27,7 @@ namespace API.AppServiceExtension
             services.AddAutoMapper(typeof(AutiMapperProfiles).Assembly);
             services.AddDbContext<DataContext>(options =>
             {
-                options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+                options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
 
             return services;

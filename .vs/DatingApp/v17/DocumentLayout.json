@@ -1,0 +1,329 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\controllers\\firstapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\controllers\\firstapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\controllers\\userregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\controllers\\userregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\entities\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\entities\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\entities\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\entities\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\controllers\\buggycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\controllers\\buggycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\migrations\\20240819101831_makeitnull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\migrations\\20240819101831_makeitnull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\entities\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\entities\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\entities\\data\\userseeddata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\entities\\data\\userseeddata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\entities\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\entities\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\entities\\appserviceextension\\appserviceextensionmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\entities\\appserviceextension\\appserviceextensionmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\migrations\\20240819095802_intidb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\migrations\\20240819095802_intidb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|c:\\users\\faizh\\datingapp\\datingwebapp\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CF6E2CC-4D14-4795-90BC-157D3ADB0C6D}|API\\API.csproj|solutionrelative:api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\UserRegisterController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UserRegisterController.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\UserRegisterController.cs",
+              "RelativeToolTip": "API\\Controllers\\UserRegisterController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:24:40.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "API\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAuwB4AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:22:26.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\AppUser.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\AppUser.cs",
+              "RelativeToolTip": "API\\Entities\\AppUser.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowA0AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:20:07.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Connection.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Connection.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Connection.cs",
+              "RelativeToolTip": "API\\Entities\\Connection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:19:59.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FirstApiController.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\FirstApiController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\FirstApiController.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\FirstApiController.cs",
+              "RelativeToolTip": "API\\Controllers\\FirstApiController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAACwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:25:43.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseApiController.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\BaseApiController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\BaseApiController.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\BaseApiController.cs",
+              "RelativeToolTip": "API\\Controllers\\BaseApiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:25:37.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "API\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwBwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:25:22.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20240819101831_makeitnull.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Migrations\\20240819101831_makeitnull.cs",
+              "RelativeDocumentMoniker": "API\\Migrations\\20240819101831_makeitnull.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Migrations\\20240819101831_makeitnull.cs",
+              "RelativeToolTip": "API\\Migrations\\20240819101831_makeitnull.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:18:32.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Seed.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Data\\Seed.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Data\\Seed.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Data\\Seed.cs",
+              "RelativeToolTip": "API\\Entities\\Data\\Seed.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAcwEIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:08:21.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20240819095802_intidb.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Migrations\\20240819095802_intidb.cs",
+              "RelativeDocumentMoniker": "API\\Migrations\\20240819095802_intidb.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Migrations\\20240819095802_intidb.cs",
+              "RelativeToolTip": "API\\Migrations\\20240819095802_intidb.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAAAMYAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:58:03.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppServiceExtensionMethods.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\AppServiceExtension\\AppServiceExtensionMethods.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\AppServiceExtension\\AppServiceExtensionMethods.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\AppServiceExtension\\AppServiceExtensionMethods.cs",
+              "RelativeToolTip": "API\\Entities\\AppServiceExtension\\AppServiceExtensionMethods.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:54:53.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Startup.cs",
+              "RelativeDocumentMoniker": "API\\Startup.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Startup.cs",
+              "RelativeToolTip": "API\\Startup.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:54:40.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BuggyController.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\BuggyController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\BuggyController.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Controllers\\BuggyController.cs",
+              "RelativeToolTip": "API\\Controllers\\BuggyController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAqwB8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:32:41.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserSeedData.json",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Data\\UserSeedData.json",
+              "RelativeDocumentMoniker": "API\\Entities\\Data\\UserSeedData.json",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Data\\UserSeedData.json",
+              "RelativeToolTip": "API\\Entities\\Data\\UserSeedData.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-19T10:07:44.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwB8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:54:05.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Photo.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Photo.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Photo.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Photo.cs",
+              "RelativeToolTip": "API\\Entities\\Photo.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T10:17:51.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\Entities\\Data\\DataContext.cs",
+              "RelativeToolTip": "API\\Entities\\Data\\DataContext.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAIwDUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T09:47:45.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "API\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\faizh\\DatingApp\\DatingWebApp\\API\\appsettings.Development.json",
+              "RelativeToolTip": "API\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-19T09:35:34.976Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,7 @@ namespace API.Entities
 
         public bool IsRejected { get; set; } = true;
 
-        public string PublicId { get; set; }
+        public string? PublicId { get; set; }
 
         public AppUser AppUser { get; set; }
 
